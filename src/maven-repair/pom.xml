@@ -15,7 +15,7 @@
     <name>repair-maven-plugin</name>
 
     <!-- FIXME change it to the project's website -->
-    <url />
+    <url>https://smee.io/AbCd1234EfGh5678</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
