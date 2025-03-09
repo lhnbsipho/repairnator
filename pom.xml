@@ -52,11 +52,11 @@
     </distributionManagement>
 
     <modules>
-    <module>src\repairnator-pipeline</module>
-    <module>src\repairnator-core</module>
-    <module>src\repairnator-realtime</module>
-    <module>src\maven-repair</module>
-    <module>src\repairnator-jenkins-plugin</module>
+    <module>src/repairnator-pipeline</module>
+    <module>src/repairnator-core</module>
+    <module>src/repairnator-realtime</module>
+    <module>src/maven-repair</module>
+    <module>src/repairnator-jenkins-plugin</module>
     </modules>
 
     <repositories>
