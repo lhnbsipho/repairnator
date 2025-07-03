@@ -14,7 +14,7 @@
         <repository>
             <id>tdurieux-maven-repository-snapshot</id>
             <name>tdurieux.github.io maven-repository</name>
-            <url>https://tdurieux.github.io/maven-repository/snapshots/</url>
+            <url>http://localhost:3000/maven-repository/snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -23,7 +23,7 @@
         <repository>
             <id>tdurieux-maven-repository-release</id>
             <name>tdurieux.github.io maven-repository</name>
-            <url>https://tdurieux.github.io/maven-repository/releases/</url>
+            <url>http://localhost:3000/maven-repository/releases/</url>
         </repository>
     </repositories>
 
@@ -164,7 +164,7 @@
                     <groupId>org.osgi.service</groupId>
                     <artifactId>org.osgi.service.prefs</artifactId>
                 </exclusion>
-            </exclusions>
+                            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.github.java-json-tools</groupId>
@@ -205,18 +205,6 @@
                 <exclusion>
                     <groupId>org.osgi.service</groupId>
                     <artifactId>org.osgi.service.prefs</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.skyscreamer</groupId>
-            <artifactId>jsonassert</artifactId>
-            <version>1.5.0</version>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.vaadin.external.google</groupId>
-                    <artifactId>android-json</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -271,7 +259,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <!-- descriptor>src/main/assembly/project.xml</descriptor -->
+                                        <!-- descriptor>src/main/assembly/project.xml</descriptor -->
                 </configuration>
                 <executions>
                     <execution>

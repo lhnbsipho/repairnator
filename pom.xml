@@ -61,6 +61,17 @@
 
     <repositories>
         <repository>
+            <id>local-maven-repo</id>
+            <name>Local Maven Repository</name>
+            <url>file:///C:/Users/marys/source/repos/maven-repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>oss-snapshot</id>
             <name>oss-snapshot</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -78,7 +89,57 @@
         <maven-coveralls-plugin.version>4.0.0</maven-coveralls-plugin.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>fr.inria.gforge.spoon</groupId>
+                <artifactId>spoon-core</artifactId>
+                <version>11.0.1-beta-17</version>
+            </dependency>
+            <dependency>
+                <groupId>fil.iagl.cocospoon</groupId>
+                <artifactId>CocoSpoon</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>br.ufu.lascam</groupId>
+                <artifactId>automatic-diff-dissection</artifactId>
+                <version>1.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.inria.gforge.spirals</groupId>
+                <artifactId>nopol</artifactId>
+                <version>0.2-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+
+        <!-- Logback Implementation -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.11</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Other Dependencies -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -96,22 +157,6 @@
             <version>2.1</version>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.1.8</version>
-
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
@@ -121,6 +166,18 @@
             <artifactId>mockito-all</artifactId>
             <version>1.10.19</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>fr.inria.gforge.spoon</groupId>
+            <artifactId>spoon-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fil.iagl.cocospoon</groupId>
+            <artifactId>CocoSpoon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.ufu.lascam</groupId>
+            <artifactId>automatic-diff-dissection</artifactId>
         </dependency>
     </dependencies>
 

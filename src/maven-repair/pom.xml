@@ -164,9 +164,9 @@
             <id>Sonatype</id>
             <url>https://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
-        <repository>
+         <repository>
             <id>tdurieux maven</id>
-            <url>https://tdurieux.github.io/maven-repository/releases/</url>
+            <url>http://localhost:3000/maven-repository/releases/</url>
         </repository>
     </repositories>
 
@@ -295,7 +295,7 @@
         <profile>
             <id>noNopol</id>
             <activation>
-                <jdk>[1.9,1.16)</jdk>
+                <jdk>!1.4</jdk>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <dependencies>
